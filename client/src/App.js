@@ -3,13 +3,14 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import './App.css'
 import { connect } from 'react-redux'
 import Header from './components/Header/Header'
+import Banner from './components/Banner/Banner'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
-        <h1 className="hello">Hello</h1>
+        <Banner />
       </div>
     )
   }

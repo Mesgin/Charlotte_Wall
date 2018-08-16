@@ -298,10 +298,56 @@ template {
   display: none; }
 
 header {
-  float: right; }
-  header .hamburger-menu span {
-    width: 40px;
-    height: 5px;
-    background: black;
-    margin-bottom: 6px;
-    display: block; }
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  height: 150px;
+  background: orange;
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+  header .hamburger-menu {
+    grid-column: 10/13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    header .hamburger-menu span {
+      width: 32px;
+      height: 4px;
+      background: white;
+      margin-bottom: 4px;
+      display: block; }
+  header .logo {
+    grid-column: 2/6; }
+
+.banner {
+  position: relative; }
+  .banner-title, .banner-subtitle, .banner-description {
+    position: absolute;
+    color: white;
+    left: 130px;
+    margin: 0;
+    z-index: 1; }
+  .banner-title {
+    top: 300px;
+    font-size: 4rem; }
+  .banner-subtitle {
+    top: 250px;
+    font-size: 1rem; }
+  .banner-description {
+    top: 450px;
+    width: 50%;
+    font-size: 1.5rem; }
+  .banner img {
+    height: auto;
+    width: 100%;
+    z-index: -2; }
+  .banner .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    opacity: 0.3; }
