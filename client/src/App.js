@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { Route, Switch, withRouter } from 'react-router-dom'
+import './App.css'
+import { connect } from 'react-redux'
+import Header from './components/Header/Header'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
+        <h1 className="hello">Hello</h1>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+const mapDispatchToProps = {}
+
+const mapStateToProps = state => ({
+  main: state.main
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

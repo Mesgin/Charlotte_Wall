@@ -1,0 +1,16 @@
+@import './assets/scss/_variables';
+@import './assets/scss/_normalize';
+@import './assets/scss/_mixins';
+
+header {
+  float: right;
+  .hamburger-menu {
+    span {
+      width: 40px;
+      height: 5px;
+      background: black;
+      margin-bottom: 6px;
+      display: block;
+    }
+  }
+}
