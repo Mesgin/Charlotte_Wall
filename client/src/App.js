@@ -1,29 +1,22 @@
 import React, { Component } from 'react'
-import { Route, Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
-import { connect } from 'react-redux'
 import Header from './components/Header/Header'
-import Banner from './components/Banner/Banner'
-import Paragraph from './components/Paragraph/Paragraph'
-import Box from './components/Box/Box'
+import Home from './components/Home/Home'
+import Perspective from './components/Perspective/Perspective'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Banner />
-        <Paragraph />
-        <Box />
-      </div>
+      <Router>
+        <div className="App">
+          <Header />
+          <Route exact path="/perspective" component={Perspective} />
+          <Route exact path="/" component={Home} />
+        </div>
+      </Router>
     )
   }
 }
 
-const mapDispatchToProps = {}
-
-const mapStateToProps = state => ({
-  main: state.main
-})
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default App
