@@ -4,6 +4,8 @@ import './App.css'
 import { connect } from 'react-redux'
 import Header from './components/Header/Header'
 import Banner from './components/Banner/Banner'
+import Paragraph from './components/Paragraph/Paragraph'
+import Box from './components/Box/Box'
 
 class App extends Component {
   render() {
@@ -11,6 +13,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <Banner />
+        <Paragraph />
+        <Box />
       </div>
     )
   }

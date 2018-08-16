@@ -1,6 +1,6 @@
-@import './assets/scss/_variables';
-@import './assets/scss/_normalize';
-@import './assets/scss/_mixins';
+@import './scss/_variables';
+@import './scss/_normalize';
+@import './scss/_mixins';
 
 header {
   display: grid;
@@ -30,9 +30,8 @@ header {
   }
 }
 .banner {
-  // height: 700px;
   position: relative;
-  // height: calc(100vh - 150px);
+  height: 700px;
   &-title,&-subtitle,&-description{
     position: absolute;
     color: white;
@@ -43,28 +42,84 @@ header {
   &-title {
     top: 300px;
     font-size: 4rem;
+    font-family: $secondary-font;
+    font-weight: 900;
   }
   &-subtitle {
     top: 250px;
     font-size: 1rem;
+    font-family: $primary-font;
+    font-weight: 500;
   }
   &-description {
     top: 450px;
     width: 50%;
     font-size: 1.5rem;
+    font-family: $primary-font;
+    line-height: 2.5rem;
   }
-  img {
-    height: auto;
-    width: 100%;
-    z-index: -2;
-  }
-  .bg {
+  &-ol {
     position: absolute;
+    background-color: orange;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: orange;
-    opacity: 0.3;
+    opacity: 0.2;
+  }
+}
+.paragraph {
+  margin: auto;
+  width: 60%;
+  p {
+    font-size: 1.5rem;
+    font-family: $primary-font;
+    margin: 6rem auto;
+  }
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 850px;
+  &-img {
+    grid-column: 2/8;
+    position: relative;
+    height: 100%;
+    width: 620px;
+    margin: 0 2rem;
+    &-ol{
+      position: absolute;
+      background-color: rgb(253, 183, 52);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.4;
+    }
+  }
+  &-large-text {
+    position: absolute;
+    top: 55%;
+    right: -45%;
+    width: 80%;
+    p {
+      font-size: 3rem;
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+  &-small-text {
+    grid-column: 8/12;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2rem;
+    p {
+      font-size: 1.5rem;
+      font-family: $primary-font;
+      margin: 15rem 0 0 2rem;
+      z-index: 1;
+    }
   }
 }

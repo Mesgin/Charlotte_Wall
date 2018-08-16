@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
+  line-height: 1.25;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
@@ -322,7 +322,8 @@ header {
     grid-column: 2/6; }
 
 .banner {
-  position: relative; }
+  position: relative;
+  height: 700px; }
   .banner-title, .banner-subtitle, .banner-description {
     position: absolute;
     color: white;
@@ -331,23 +332,73 @@ header {
     z-index: 1; }
   .banner-title {
     top: 300px;
-    font-size: 4rem; }
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 900; }
   .banner-subtitle {
     top: 250px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500; }
   .banner-description {
     top: 450px;
     width: 50%;
-    font-size: 1.5rem; }
-  .banner img {
-    height: auto;
-    width: 100%;
-    z-index: -2; }
-  .banner .bg {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2.5rem; }
+  .banner-ol {
     position: absolute;
+    background-color: orange;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: orange;
-    opacity: 0.3; }
+    opacity: 0.2; }
+
+.paragraph {
+  margin: auto;
+  width: 60%; }
+  .paragraph p {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    margin: 6rem auto; }
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 850px; }
+  .box-img {
+    grid-column: 2/8;
+    position: relative;
+    height: 100%;
+    width: 620px;
+    margin: 0 2rem; }
+    .box-img-ol {
+      position: absolute;
+      background-color: #fdb734;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.4; }
+  .box-large-text {
+    position: absolute;
+    top: 55%;
+    right: -45%;
+    width: 80%; }
+    .box-large-text p {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-style: italic; }
+  .box-small-text {
+    grid-column: 8/12;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2rem; }
+    .box-small-text p {
+      font-size: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+      margin: 15rem 0 0 2rem;
+      z-index: 1; }

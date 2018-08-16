@@ -1,0 +1,15 @@
+@mixin media-query($arg){
+  @media screen and (max-width: $arg) {
+    @content
+  }
+};
+
+// @mixin bg-overlay{
+    // position: absolute;
+    // background-color: orange;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // opacity: 0.2;
+// }
